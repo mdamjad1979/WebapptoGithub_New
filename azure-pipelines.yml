@@ -33,6 +33,5 @@ steps:
   displayName: 'dotnet publish'
   inputs:
     command: 'publish'
-    publishWebProjects: false
-    projects: '**/*.csproj'
+    publishWebProjects: true
     arguments: '  configuration: $(buildConfiguration) --o $(Build.ArtifactStagingDirectory)'
