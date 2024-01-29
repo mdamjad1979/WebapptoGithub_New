@@ -35,9 +35,4 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '**/*.csproj'
-    arguments: '-o $(Build.ArtifactStagingDirectory)/Output'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    arguments: '  configuration: $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/Output'
